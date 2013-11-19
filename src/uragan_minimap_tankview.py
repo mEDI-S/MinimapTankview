@@ -60,7 +60,7 @@ def getEntryMatrix(id):
 
 def minimapvhc_clb():
 	minimapvhc()
-	BigWorld.callback(0.1, minimapvhc_clb)
+	BigWorld.callback(1.0, minimapvhc_clb)
 
 
 minimapvhc_clb()
