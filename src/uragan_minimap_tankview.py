@@ -27,9 +27,6 @@ def minimapvhc():
 			arena = player.arena
 			vehicles = arena.vehicles
 			for vehicleID, desc in vehicles.items():
-				activeTurretPosition = desc['vehicleType'].activeTurretPosition
-				if activeTurretPosition != 0:
-					LOG_WARNING(activeTurretPosition)
 				if player.team is not vehicles[vehicleID]['team'] or 'SPG' in desc['vehicleType'].type.tags:
 					if desc['isAlive'] and player.playerVehicleID != vehicleID:
 						entity = BigWorld.entity(vehicleID)
