@@ -42,7 +42,7 @@ def minimapvhc():
 							mm = Math.WGCombinedMP()
 							mm.translationSrc = m.source
 							mm.rotationSrc = rot
-							enemymodellist[vehicleID] = g_windowsManager.battleWindow.minimap._Minimap__ownUI.addEntry(mm, g_windowsManager.battleWindow.minimap.zIndexManager.getVehicleIndex(vehicleID) - 100)
+							enemymodellist[vehicleID] = g_windowsManager.battleWindow.minimap._Minimap__ownUI.addEntry(mm, g_windowsManager.battleWindow.minimap.zIndexManager.getVehicleIndex(vehicleID) - 50)
 							g_windowsManager.battleWindow.minimap._Minimap__ownUI.entryInvoke(enemymodellist[vehicleID], ('gotoAndStop', ['cursorNormal']))
 						elif enemymodellist.has_key(vehicleID):
 							g_windowsManager.battleWindow.minimap._Minimap__ownUI.delEntry(enemymodellist[vehicleID])
