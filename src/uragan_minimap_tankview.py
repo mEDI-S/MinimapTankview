@@ -34,7 +34,9 @@ def minimapvhc():
 			arena = player.arena
 			vehicles = arena.vehicles
 			for vehicleID, desc in vehicles.items():
-				if player.team is not vehicles[vehicleID]['team'] or MTVconfig['showAllySPG'] and 'SPG' in desc['vehicleType'].type.tags or MTVconfig['showAllyTD'] and 'AT-SPG' in desc['vehicleType'].type.tags:
+				if player.team is not vehicles[vehicleID]['team'] and not MTVconfig['showEnemy']:
+					None
+				elif player.team is not vehicles[vehicleID]['team'] or MTVconfig['showAllySPG'] and 'SPG' in desc['vehicleType'].type.tags or MTVconfig['showAllyTD'] and 'AT-SPG' in desc['vehicleType'].type.tags:
 					if desc['isAlive'] and player.playerVehicleID != vehicleID:
 						entity = BigWorld.entity(vehicleID)
 						if entity is not None:
@@ -89,6 +91,8 @@ def loadMTVConfig():
 		MTVconfig['showAllySPG'] = True
 	if not MTVconfig.has_key("showAllyTD"):
 		MTVconfig['showAllyTD'] = False
+	if not MTVconfig.has_key("showEnemy"):
+		MTVconfig['showEnemy'] = False
 
 loadMTVConfig()
 minimapvhc_clb()

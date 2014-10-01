@@ -1,5 +1,6 @@
 {
 	"showInBattleReplay": true,
 	"showAllySPG": true,
-	"showAllyTD": true
+	"showAllyTD": true,
+	"showEnemy" : false
 }
