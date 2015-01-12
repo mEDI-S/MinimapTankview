@@ -71,7 +71,7 @@ def minimapvhc_clb():
 def loadMTVConfig():
 	global MTVconfig
 
-	config_file = os.getcwd() + os.sep + 'res_mods' + os.sep + 'xvm' + os.sep + 'configs' + os.sep + 'tankview.xc'
+	config_file = os.getcwd() + os.sep + 'res_mods' + os.sep + 'configs' + os.sep + 'minimap_tankview.xc'
 
 	if not os.path.exists(config_file):
 		LOG_NOTE("config file missing (" + config_file + ")")
